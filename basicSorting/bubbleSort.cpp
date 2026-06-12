@@ -23,7 +23,7 @@ int main(){
             if (arr[j] > arr[j + 1])
             {
                 swap(&arr[j], &arr[j + 1]);
-                didSwap++;      // for optimisation for Best case scenerio
+                didSwap++;      // for optimisation for Best case scenerio (early exit)
             }
         }
         if (didSwap == 0)
