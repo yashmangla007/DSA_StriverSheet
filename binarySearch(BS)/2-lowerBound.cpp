@@ -1,7 +1,7 @@
 /*-------------Implement Lower Bound------------------
 Problem Statement: Given a sorted array of N integers and an integer x, write a program to find the lower 
                    bound of x.
-
+--> Sabse badi index with a value less than x.
 What is lower bound?
 The lower bound algorithm finds the first or the smallest index in a sorted array where the value at that 
 index is greater than or equal to a given key i.e. x.
@@ -19,7 +19,7 @@ public:
         int low= 0, high= n-1, mid, ans=n;
         while(low<=high){
             mid = low+((high-low)/2);
-            if(nums[mid]>= x){  // we will have to eliminate the left half
+            if(nums[mid]> x){  // we will have to eliminate the left half
                 ans = mid;
                 high = mid-1;
             }
