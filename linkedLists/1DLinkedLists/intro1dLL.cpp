@@ -13,7 +13,7 @@ struct Node{
 
 int main(){
 
-    vector<int> arr = {2,5, 7,8};
+    vector<int> arr = {2, 5, 7, 8};
     
     Node* y = new Node(arr[0], nullptr);
 
