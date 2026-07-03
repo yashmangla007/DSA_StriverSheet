@@ -31,6 +31,14 @@ ListNode* convertToArray(vector<int> &arr){
 int main(){
 
     vector<int> arr = {2, 6, 3, 7, 80, 12, 42};
+    ListNode* head = convertToArray(arr);
+
+    ListNode* temp = head;
+    while(temp!=nullptr){
+        cout<<temp->data<<" ";
+        temp = temp->next;
+    }
+    
 
     return 0;
 } 
