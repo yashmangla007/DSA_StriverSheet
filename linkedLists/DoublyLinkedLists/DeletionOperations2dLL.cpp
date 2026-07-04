@@ -27,7 +27,7 @@ ListNode* convertToArray(vector<int> &arr){
     }
     return head;
 }
-
+//==============================================================================================================
 ListNode* removeHead(ListNode* head){
     if(head->next==nullptr || head==nullptr) return nullptr;
     
@@ -40,7 +40,7 @@ ListNode* removeHead(ListNode* head){
     
     return head;
 }
-
+//==============================================================================================================
 ListNode* removeTail(ListNode* head){
     if(head->next==nullptr || head==nullptr) return nullptr;
     
@@ -56,7 +56,7 @@ ListNode* removeTail(ListNode* head){
     
     return head;
 }
-
+//==============================================================================================================
 ListNode* removeKth(ListNode* head, int k){
     if(head->next==nullptr || head==nullptr) return nullptr;
 
