@@ -1,11 +1,6 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-void swap(int x,int y){
-   
-    return;
-}
-
 int main(){
 
     int a, b;
