@@ -1,0 +1,25 @@
+{
+  "version": 1,
+  "notes": [
+    {
+      "id": "8e96f6a7-5cd4-472f-848e-590312b2ad04",
+      "filePath": "bubbleSort.cpp",
+      "line": 19,
+      "anchorText": "void swap(int* x, int* y){",
+      "note": "Used to swap the two numbers",
+      "createdAt": "2026-07-14T17:07:06.419Z",
+      "updatedAt": "2026-07-14T17:07:06.419Z",
+      "orphaned": false
+    },
+    {
+      "id": "dd9c8676-c5da-47b7-b6fe-445bc22d4b9e",
+      "filePath": "bubbleSort.cpp",
+      "line": 42,
+      "anchorText": "if (!didSwap){",
+      "note": "Early optimisation (For best case scenerios)",
+      "createdAt": "2026-07-14T17:27:09.107Z",
+      "updatedAt": "2026-07-14T17:27:09.107Z",
+      "orphaned": false
+    }
+  ]
+}
