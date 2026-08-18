@@ -1,0 +1,15 @@
+{
+  "version": 1,
+  "notes": [
+    {
+      "id": "ad4c0fd7-8391-4591-95ad-025321757aeb",
+      "filePath": "bubbleSort.cpp",
+      "line": 5,
+      "anchorText": "void swap(int* x, int* y){",
+      "note": "Swapped the two",
+      "createdAt": "2026-08-12T04:49:09.002Z",
+      "updatedAt": "2026-08-12T04:49:09.002Z",
+      "orphaned": false
+    }
+  ]
+}
