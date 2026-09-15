@@ -1,14 +1,16 @@
 #include<iostream>
 using namespace std;
 
+#define MaxSize 11
+
 class myStack{
 public:
-    int st[11];
+    int st[MaxSize];
     int n = sizeof(st)/sizeof(st[0]);
     int topind = -1;
 
     void push(int x){                   //O(1)
-        if(topind>=n-1) return;
+        if(topind>=MaxSize-1) return;
         topind ++;
         st[topind] = x;
         return;
@@ -42,9 +44,9 @@ class MyQueue{
     int cursize = 0;
 
     void push(int x){
-        if(cursize == n) return;
+        if(cursize == MaxSize) return;
         if(start == -1) start = 0;
-        end = (end+1)%n;
+        end = (end+1)%MaxSize;
         q[end] = x;
         cursize++;
         return;
