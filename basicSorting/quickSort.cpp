@@ -8,20 +8,40 @@ void swap(int* x, int* y){
     return;
 }
 
+// void quickSort(int arr[], int low, int high){
+//     if(low>=high) return;
+
+//     int pivot = low, i = low, j = high;
+    
+//     while(i<=j){
+//         while(i<=high && arr[i]<=arr[pivot]) i++;
+//         while(j>=low && arr[j]>arr[pivot]) j--;
+//         if(i<j) swap(&arr[i], &arr[j]);
+//     }
+//     swap(arr[j], arr[pivot]);
+    
+//     quickSort(arr, low, j-1);
+//     quickSort(arr, j+1, high);
+// }
+
 void quickSort(int arr[], int low, int high){
+
     if(low>=high) return;
 
-    int pivot = low, i = low, j = high;
-    
+    int pivot = low;
+    int i=low, j= high;
     while(i<=j){
         while(i<=high && arr[i]<=arr[pivot]) i++;
-        while(j>=low && arr[j]>arr[pivot]) j--;
-        if(i<j) swap(&arr[i], &arr[j]);
+        while(j>low && arr[j]>arr[pivot]) j--;
+
+        if(i<j) swap(arr[i], arr[j]);
     }
     swap(arr[j], arr[pivot]);
-    
+
     quickSort(arr, low, j-1);
     quickSort(arr, j+1, high);
+
+    return;
 }
 
 int main(){
