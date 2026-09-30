@@ -75,6 +75,60 @@ string infixToPostfix(string input){
 
 }
 
+string infixToPrefix(string input){
+
+    string ans = "";
+    stack<char> st;
+
+    for(int i = input.size()-1; i>=0; i--){
+
+        //Doing infix to postfix, with some tweaks { (=>) && )=>( }
+        
+        if(isOperand(input[i])) ans+= input[i];
+
+        else if(input[i]==')') st.push('(') ;
+
+        else if(input[i]=='('){
+            while(!st.empty() && st.top()!='(') {
+                ans += st.top();
+                st.pop();
+            }
+            st.pop();
+        }
+
+        else if(isOperator(input[i])) {
+
+            while(!st.empty() && st.top()!='(' &&
+                 ( priority(st.top())>priority(input[i]) || (priority(st.top())==priority(input[i])  && input[i]=='^') )){
+                    ans+= st.top();
+                    st.pop();
+                }
+            
+            st.push(input[i]);
+        }
+
+    }
+
+    while(!st.empty()){
+        ans += st.top();
+        st.pop();
+    }
+
+    reverse(ans.begin(), ans.end());
+
+    return ans;
+
+}
+
+
 int main(){
+
+    string input;
+    cout<<"Enter the string: ";
+    cin>>input;
+
+    string ans = infixToPrefix(input);
+    cout<<'\n'<<ans;
+
     return 0;
 }
