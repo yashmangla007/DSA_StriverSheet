@@ -99,9 +99,11 @@ string infixToPrefix(string input){
         else if(isOperator(input[i])) {
 
             while(!st.empty() && st.top()!='(' &&
-                 ( priority(st.top())>priority(input[i]) || (priority(st.top())==priority(input[i])  && input[i]=='^') )){
-                    ans+= st.top();
-                    st.pop();
+                 ( priority(st.top())>priority(input[i]) 
+                    || (priority(st.top())==priority(input[i])  
+                        && input[i]=='^') )){
+                        ans+= st.top();
+                        st.pop();
                 }
             
             st.push(input[i]);
