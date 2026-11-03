@@ -24,7 +24,7 @@ void swap(int* x, int* y){
 //     quickSort(arr, j+1, high);
 // }
 
-void quickSort(int arr[], int low, int high){
+void quickSort(int &arr[], int low, int high){
 
     if(low>=high) return;
 
